@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos e Programação - Unipampa</title>
+    <style>
+        /* Estilos básicos para o visual do site */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        header { background-color: #004a80; color: white; padding: 20px; text-align: center; }
+        nav { display: flex; background-color: #333; justify-content: center; }
+        nav button { background: none; border: none; color: white; padding: 14px 20px; cursor: pointer; font-size: 16px; }
+        nav button:hover { background-color: #111; }
+        .content { padding: 20px; max-width: 800px; margin: auto; display: none; }
+        .active { display: block; }
+        .card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .recado { border-left: 5px solid #ffcc00; }
+        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Engenharia Mecânica - Unipampa</h1>
+    <p>1° Semestre | Disciplina: Algoritmos e Programação</p>
+</header>
+
+<nav>
+    <button onclick="abrirAba('inicio')">Início</button>
+    <button onclick="abrirAba('atividades')">Atividades</button>
+    <button onclick="abrirAba('recados')">Recados</button>
+</nav>
+
+<div id="inicio" class="content active">
+    <h2>Bem-vindo!</h2>
+    <p>Este site foi criado para organizar as atividades e recados da disciplina de <strong>Algoritmos e Programação</strong> do curso de Engenharia Mecânica da Universidade Federal do Pampa (Unipampa).</p>
+    <p>Use o menu acima para navegar entre a lista de tarefas entregues e os avisos do professor.</p>
+</div>
+
+<div id="atividades" class="content">
+    <h2>Atividades Realizadas</h2>
+    
+    <div class="card">
+        <h3>Atividade 1: Introdução ao Python</h3>
+        <p><strong>Data de Postagem:</strong> 01/06/2026</p>
+        <p><strong>Prazo de Entrega:</strong> 10/06/2026</p>
+        <p><strong>Professor:</strong> Nome do Professor</p>
+        <p><strong>Documento:</strong> <a href="documentos/atividade1.pdf" target="_blank">Visualizar/Baixar Atividade</a></p>
+    </div>
+</div>
+
+<div id="recados" class="content">
+    <h2>Mural de Recados</h2>
+    
+    <div class="card recado">
+        <h3>⚠️ Aviso sobre a Prova 1</h3>
+        <p><em>Postado em: 15/06/2026</em></p>
+        <p>Atenção, turma! A nossa primeira avaliação teórica foi adiada para a próxima semana. Estudem as estruturas de repetição.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 - Meu Portfólio Acadêmico</p>
+</footer>
+
+<script>
+    // Função simples para alternar entre as abas
+    function abrirAba(idAba) {
+        var abas = document.getElementsByClassName("content");
+        for (var i = 0; i < abas.length; i++) {
+            abas[i].classList.remove("active");
+        }
+        document.getElementById(idAba).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
