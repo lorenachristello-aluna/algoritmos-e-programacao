@@ -5,17 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoritmos e Programação - Unipampa</title>
     <style>
-        /* Estilos básicos para o visual do site */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        header { background-color: #004a80; color: white; padding: 20px; text-align: center; }
-        nav { display: flex; background-color: #333; justify-content: center; }
-        nav button { background: none; border: none; color: white; padding: 14px 20px; cursor: pointer; font-size: 16px; }
-        nav button:hover { background-color: #111; }
-        .content { padding: 20px; max-width: 800px; margin: auto; display: none; }
-        .active { display: block; }
-        .card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .recado { border-left: 5px solid #ffcc00; }
-        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
+        /* --- NOVO VISUAL DARK AZULADO --- */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #0f172a; /* Fundo todo azul escuro */
+    color: #cbd5e1; /* Texto claro para contraste */
+}
+
+/* Cabeçalho com Animação de Ondas de Tons Azuis */
+header { 
+    position: relative;
+    background: linear-gradient(45deg, #1e3a8a, #0d9488, #1d4ed8);
+    background-size: 400% 400%;
+    animation: ondasAzuis 12s ease infinite;
+    color: white; 
+    padding: 40px 20px; 
+    text-align: center; 
+    overflow: hidden;
+}
+
+@keyframes ondasAzuis {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+nav { 
+    display: flex; 
+    background-color: #1e293b; /* Menu combinando com o fundo */
+    justify-content: center; 
+    border-bottom: 1px solid #334155;
+}
+
+nav button { 
+    background: none; 
+    border: none; 
+    color: #94a3b8; 
+    padding: 14px 20px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: 0.3s;
+}
+
+nav button:hover { 
+    background-color: #334155; 
+    color: white;
+}
+
+.content { 
+    padding: 20px; 
+    max-width: 800px; 
+    margin: auto; 
+    display: none; 
+}
+
+.active { 
+    display: block; 
+}
+
+/* Blocos de Atividades e Apostilas Estilo Dark */
+.card { 
+    background: #1e293b !important; /* Cor do bloco idêntica à da foto */
+    padding: 20px !important; 
+    margin-bottom: 25px !important; 
+    border-radius: 12px !important; /* Bordas mais arredondadas e modernas */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #334155 !important; /* Linha sutil ao redor */
+}
+
+/* Ajustando textos e links internos para o modo escuro */
+.card h3 { color: #38bdf8 !important; margin-top: 0; } /* Títulos em azul neon */
+.card p { color: #94a3b8 !important; }
+.card strong { color: #f1f5f9 !important; }
+.card a { color: #38bdf8 !important; text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+
+footer { 
+    text-align: center; 
+    padding: 30px 20px; 
+    color: #64748b;
+    background-color: #0f172a;
+}
     </style>
 </head>
 <body>
@@ -616,6 +688,9 @@
 </div>
 
 <footer>
+    <div style="margin-bottom: 20px;">
+        <img src="documentos/logo-unipampa.png" alt="Logo Unipampa" style="max-width: 180px; height: auto; filter: drop-shadow(0px 2px 8px rgba(0,0,0,0.5));">
+    </div>
     <p>&copy; 2026 - Meu Portfólio Acadêmico</p>
 </footer>
 
